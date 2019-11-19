@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      span.red {
+        background-color: red;
+        border-radius: 5px;
+        color: white;
+      }
+      span.green {
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+      }
+      span.blue {
+        background-color: blue;
+        border-radius: 5px;
+        color: white;
+      }
+
+      #red:not(:checked) ~ .red {
+        display: none;
+      }
+      #green:not(:checked) ~ .green {
+        display: none;
+      }
+      #blue:not(:checked) ~ .blue {
+        display: none;
+      }
+
+      [for="red"] {
+        color: red;
+      }
+      [for="green"] {
+        color: green;
+      }
+
+      [for="blue"] {
+        color: blue;
+      }
+
+      label {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      input {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="red" />
+    <input type="checkbox" id="green" />
+    <input type="checkbox" id="blue" />
+
+    <label for="red">Красний </label>
+    <label for="green">Зелений </label>
+    <label for="blue">Синий </label>
+
+    <span class="red">червоні</span>
+    <span class="green">зелені</span>
+    <span class="green">зелені</span>
+    <span class="red">червоні</span>
+    <span class="blue">сині</span>
+    <span class="green">зелені</span>
+    <span class="red">червоні</span>
+    <span class="blue">сині</span>
+    <span class="red">червоні</span>
+    <span class="green">зелені</span>
+    <span class="blue">сині</span>
+  </body>
+</html>
